@@ -5,7 +5,7 @@ import { green, white } from "../../utils/colors";
 export default function Cover() {
   const CoverBody = styled.div`
     padding: 100px 200px;
-    height: 350px;
+    height: 360px;
   `;
   const HeaderOne = styled.h1`
     padding-bottom: 20px;
