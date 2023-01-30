@@ -36,17 +36,18 @@ export default function About() {
     text-align: justify;
   `;
   const SubTitle = styled.p`
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 20px;
     color: ${(props) => props.fontColor};
   `;
   const LogoSection = styled.div`
-    display: felx;
+    display: flex;
     flex-direction: row;
     align-items: center;
+    padding-top: 10px;
     width: 600px;
-    > *{
-      padding: 5px 15px;
+    > * {
+      padding-right: 40px;
     }
   `;
   return (
@@ -69,19 +70,23 @@ export default function About() {
       <LogoSection>
         <LogoHTML />
         <LogoCSS />
-        <LogoReactJS />
-        <LogoNodeJS />
-        <LogoFlutter />
-        <LogoDocker />
-        <LogoPython />
-        <LogoGitHub />
-        <LogoFirebase />
-        <LogoGit />
-        <LogoCpp />
-        <LogoMySQL />
         <LogoJavascript />
-        <LogoMongoDB />
+        <LogoReactJS />
         <LogoReactNative />
+        <LogoNodeJS />
+      </LogoSection>
+      <LogoSection>
+        <LogoPython />
+        <LogoCpp />
+        <LogoGit />
+        <LogoGitHub />
+        <LogoMySQL />
+        <LogoFlutter />
+      </LogoSection>
+      <LogoSection>
+        <LogoFirebase />
+        <LogoMongoDB />
+        <LogoDocker />
       </LogoSection>
     </AboutBody>
   );
