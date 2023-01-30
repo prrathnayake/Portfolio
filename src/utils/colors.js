@@ -7,6 +7,7 @@ const lightestSlate = "#ccd6f6";
 const white = "#e6f1ff";
 const green = "#64ffda";
 const black = "#000000";
+const grey = "#BEBEBE";
 
 export {
   navy,
@@ -18,4 +19,5 @@ export {
   white,
   green,
   black,
+  grey
 };
