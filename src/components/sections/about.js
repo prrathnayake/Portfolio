@@ -19,7 +19,7 @@ import LogoReactNative from "../logoes/reactNative";
 
 export default function About() {
   const AboutBody = styled.div`
-    padding: 100px 200px;
+    padding: 30px 200px;
     height: 100vh;
   `;
   const HeaderOne = styled.h1`
@@ -51,7 +51,7 @@ export default function About() {
     }
   `;
   return (
-    <AboutBody>
+    <AboutBody id="about">
       <HeaderOne fontColor={green}>Who am I?</HeaderOne>
       <Discription fontColor={slate}>
         Lorem Ipsum is simply dummy text of the printing and typesetting

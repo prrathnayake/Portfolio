@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { navy, slate } from "../utils/colors";
 import { navLinks } from "../utils/config";
+import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   //add styles using styled-components
@@ -33,7 +33,7 @@ export default function Navbar() {
     }
   `;
 
-  const StyledLink = styled(Link)`
+  const StyledLink = styled(HashLink)`
     color: ${(props) => props.fontColor};
     text-decoration: none;
   `;
@@ -45,7 +45,7 @@ export default function Navbar() {
           {navLinks && // add navbar items
             navLinks.map(({ url, name }, i) => (
               <li key={i}>
-                <StyledLink fontColor={slate} to={url}>
+                <StyledLink fontColor={slate} smooth to={url}>
                   {name}
                 </StyledLink>
               </li>
