@@ -6,6 +6,7 @@ export default function Footer() {
     min-height: 70px;
     padding: 15px;
     text-align: center;
+    color: white;
   `;
   return <StyledFooter>Designed & Build by Pasan Rathnayake</StyledFooter>;
 }
