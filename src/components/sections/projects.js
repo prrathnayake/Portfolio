@@ -1,20 +1,146 @@
 import React from "react";
 import styled from "styled-components";
-import { green } from "../../utils/colors";
+import { green, grey, slate, white } from "../../utils/colors";
+import { projects } from "../../utils/config";
+import Icon from "../icons/icon";
 
 export default function Projects() {
   const ProjectsBody = styled.div`
     padding: 10px 200px;
-    height: 100vh;
   `;
   const HeaderOne = styled.h1`
     font-size: 60px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
+    padding-bottom: 30px;
+  `;
+  const ProjectCard = styled.div`
+    display: flex;
+    padding-bottom: 50px;
+  `;
+  const ProjectDetails = styled.div``;
+  const TechList = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    justify-content:  ${(props) => props.side};
+  `;
+  const TechListItem = styled.p`
+    font-size: 14px;
+    color: ${(props) => props.fontColor};
+    font-family: var(--font-mono);
+    padding-right: 12px;
+  `;
+  const ProjectName = styled.h2`
+    font-size: 25px;
+    color: ${(props) => props.fontColor};
+    font-family: var(--font-sans);
+    text-align: ${(props) => props.side};
+  `;
+  const ProjectDis = styled.h2`
+    font-size: 16px;
+    color: ${(props) => props.fontColor};
+    font-family: var(--font-sans);
+    width: 450px;
+    text-align: justify;
+    padding-top: 15px;
+  `;
+
+  const Image = styled.img`
+    height: 300px;
+    padding: 0px 20px;
+  `;
+
+  const Footer = styled.div`
+    color: white;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:  ${(props) => props.side};
+    a {
+      text-decoration: none;
+      color: ${(props) => props.fontColor};
+      padding-right: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p {
+        font-size: 15px;
+        padding-right: 5px;
+      }
+    }
   `;
   return (
     <ProjectsBody id="projects">
       <HeaderOne fontColor={green}>Projects</HeaderOne>
+      {projects &&
+        projects.map((details, i) => {
+          if (i % 2 === 1) {
+            return (
+              <ProjectCard>
+                <ProjectDetails>
+                  <ProjectName side={"left"} fontColor={slate}>{details.name}</ProjectName>
+                  <TechList side={"left"}>
+                    {details.techs.map((tech) => {
+                      return (
+                        <TechListItem fontColor={grey}>{tech}</TechListItem>
+                      );
+                    })}
+                  </TechList>
+                  <ProjectDis fontColor={grey}>
+                    {details.description}
+                  </ProjectDis>
+                  <Footer side={"left"} fontColor={white}>
+                    {details.gitHub.map((gitHub) => {
+                      return (
+                        <a href={gitHub.link}>
+                          <p>{gitHub.name} - </p>
+                          <Icon name="GitHub" />
+                        </a>
+                      );
+                    })}
+                  </Footer>
+                </ProjectDetails>
+                <Image
+                  src={require(`../../images/projects/${details.image}`)}
+                  alt="myHealthSystem"
+                />
+              </ProjectCard>
+            );
+          } else {
+            return (
+              <ProjectCard>
+                <Image
+                  src={require(`../../images/projects/${details.image}`)}
+                  alt="myHealthSystem"
+                />
+                <ProjectDetails>
+                  <ProjectName side={"right"} fontColor={slate}>{details.name}</ProjectName>
+                  <TechList side={"right"}>
+                    {details.techs.map((tech) => {
+                      return (
+                        <TechListItem fontColor={grey}>{tech}</TechListItem>
+                      );
+                    })}
+                  </TechList>
+                  <ProjectDis fontColor={grey}>
+                    {details.description}
+                  </ProjectDis>
+                  <Footer side={"right"} fontColor={white}>
+                    {details.gitHub.map((gitHub) => {
+                      return (
+                        <a href={gitHub.link}>
+                          <p>{gitHub.name} - </p>
+                          <Icon name="GitHub" />
+                        </a>
+                      );
+                    })}
+                  </Footer>
+                </ProjectDetails>
+              </ProjectCard>
+            );
+          }
+        })}
     </ProjectsBody>
   );
 }
