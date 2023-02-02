@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export default function Footer() {
   const StyledFooter = styled.footer`
-    min-height: 70px;
     padding: 15px;
     text-align: center;
     color: white;
