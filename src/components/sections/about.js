@@ -54,15 +54,14 @@ export default function About() {
     <AboutBody id="about">
       <HeaderOne fontColor={green}>Who am I?</HeaderOne>
       <Discription fontColor={slate}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        Hello, I'm Pasan Rathnayake and I'm a software engineer with a passion
+        for solving complex problems and building innovative software solutions.
+        With experience in various programming languages and a deep
+        understanding of software development methodologies. Whether working as
+        part of a team or independently, I bring creativity, attention to
+        detail, and a commitment to excellence to every project I undertake.
+        Browse my portfolio to see some of my recent work and to learn more
+        about my skills and experience.
       </Discription>
       <SubTitle fontColor={grey}>
         Technologies that I've been worked with,
