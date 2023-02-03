@@ -49,29 +49,23 @@ export default function About() {
   `;
   const SubTitle = styled.p`
     padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 20px;
     color: ${(props) => props.fontColor};
   `;
   const LogoSection = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: grid;
     align-items: center;
     padding-top: 10px;
     width: 600px;
-    > * {
-      padding-right: 40px;
-      @media (max-width: 641px) {
-        width: 50px;
-        grid-template-columns: auto auto auto auto auto;
-
-          display: flex;
-          flex-wrap: wrap;
-          padding-right: 40px;
-      }
-    }
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 3px;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px 10px;
     @media (max-width: 641px) {
       width: 100%;
-      grid-template-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto;
     }
   `;
   return (
@@ -97,16 +91,12 @@ export default function About() {
         <LogoReactJS />
         <LogoReactNative />
         <LogoNodeJS />
-      </LogoSection>
-      <LogoSection>
         <LogoPython />
         <LogoCpp />
         <LogoGit />
         <LogoGitHub />
         <LogoMySQL />
         <LogoFlutter />
-      </LogoSection>
-      <LogoSection>
         <LogoFirebase />
         <LogoMongoDB />
         <LogoDocker />
