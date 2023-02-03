@@ -43,7 +43,7 @@ export default function Projects() {
     justify-content: ${(props) => props.side};
     @media (max-width: 641px) {
       display: grid;
-      grid-template-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
       justify-content: left;
     }
   `;
