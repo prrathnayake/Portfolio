@@ -94,10 +94,10 @@ export default function Contact() {
     setLoading(true);
     emailjs
       .sendForm(
-        "service_e1qdajj",
-        "template_l1rjvor",
+        process.env.REACT_APP_Email_SERVICE_CODE,
+        process.env.REACT_APP_Email_TEMPLATE_CODE,
         form.current,
-        "ma1R6Wrqp5SsJ89n3"
+        process.env.REACT_APP_Email_PUBLIC_KEY
       )
       .then(
         function (response) {
@@ -106,7 +106,7 @@ export default function Contact() {
           setShowPopUp(true);
         },
         function (error) {
-          setMsg('Something is Wrong, Please Try Again!!!');
+          setMsg('Something is Wrong, Please Try Again!!!Emai');
         }
       );
   };
