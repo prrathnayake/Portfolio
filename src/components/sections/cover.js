@@ -27,7 +27,7 @@ export default function Cover() {
   `;
   const Discription = styled.p`
     padding-top: 30px;
-    width: 600px;
+    width: 450px;
     font-size: 16px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
@@ -40,8 +40,7 @@ export default function Cover() {
         <Name fontColor={white}>Pasan Rathnayake</Name>
         <SubTitle fontColor={white}>Software Engineer</SubTitle>
         <Discription fontColor={white}>
-          Hi welcome, I'm a software engineer with some experience in web and
-          mobile development. If you're willing to hire me, contact me.
+        Hi, I'm passionate about delivering innovative and high-quality software solutions.
         </Discription>
       </FlexDIV>
       <img src={require("../../images/me.jpg")} alt="me" />
