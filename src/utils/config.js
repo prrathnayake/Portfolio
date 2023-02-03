@@ -54,8 +54,16 @@ module.exports = {
       ],
       image: "myHealthSystem.png",
       description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      techs: ["NodeJS", "ReactJS", "Flutter", "MySQL", "Fribase", "Python", "Docker"],
+        " My Health System is a comprehensive solution that brings together various components to provide a seamless healthcare experience. The system includes a mobile app, a web app, an API server, and a machine learning component, each available on GitHub. The mobile app and web app offer a user-friendly interface for patients, while the API server manages the communication between the front-end and the database. The machine learning component leverages cutting-edge technology to predict diseases based on data input.",
+      techs: [
+        "NodeJS",
+        "ReactJS",
+        "Flutter",
+        "MySQL",
+        "Fribase",
+        "Python",
+        "Docker",
+      ],
     },
     {
       name: "Instagram Clone",
@@ -71,7 +79,7 @@ module.exports = {
       ],
       image: "InstaClone.jpg",
       description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "The Instagram Clone is a mobile application that offers a similar user experience to the popular photo sharing platform. The app includes a front-end built with React Native and a back-end powered by NodeJS. The integration of Redux helps manage the app's state, while MongoDB serves as the database. With its sleek user interface, real-time updates, and smooth navigation, this Instagram clone showcases the capabilities of React Native and NodeJS in creating high-quality mobile applications.",
       techs: ["React Native", "NodeJS", "Redux", "MongoDB"],
     },
     {
@@ -84,7 +92,7 @@ module.exports = {
       ],
       image: "WhatsAppUI.jpg",
       description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "The WhatsApp UI is a mobile application that provides a replica of the WhatsAPP. Built with React Native, the app offers a similar look and feel to the original app, making it a great tool for those interested in learning more about the technology. With its clean and intuitive design, this WhatsApp UI demonstrates the power of React Native in creating visually appealing and responsive mobile applications.",
       techs: ["React Native"],
     },
     {
@@ -97,7 +105,7 @@ module.exports = {
       ],
       image: "CRUD.png",
       description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "The CRUD Web Application is a full-stack web application that allows for the creation, reading, updating, and deletion of data. Built with ReactJS for the front-end and NodeJS for the back-end, this application is powered by a MySQL database. Its intuitive user interface and seamless integration of different technologies make this CRUD application a great example of modern web development practices",
       techs: ["ReactJS", "NodeJS", "MySQL"],
     },
   ],
