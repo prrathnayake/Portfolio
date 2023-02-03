@@ -18,22 +18,27 @@ export default function Projects() {
     padding-bottom: 30px;
   `;
   const ProjectCard = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
     padding-bottom: 50px;
     @media (max-width: 641px) {
-      flex-direction: column;
+      grid-template-columns: 90vw;
+      width: 100px;
     }
   `;
-  const ProjectDetails = styled.div``;
+  const ProjectDetails = styled.div`
+    @media (max-width: 641px) {
+      padding-bottom: 10px;
+    }
+  `;
   const TechList = styled.div`
     display: flex;
     flex-direction: row;
     padding-top: 5px;
     justify-content: ${(props) => props.side};
     @media (max-width: 641px) {
-      justify-content: left;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
     }
   `;
   const TechListItem = styled.p`
@@ -42,10 +47,6 @@ export default function Projects() {
     font-family: var(--font-mono);
     padding-right: 12px;
     padding-left: 12px;
-    @media (max-width: 641px) {
-      display: flex;
-      flex-wrap: wrap;
-    }
   `;
   const ProjectName = styled.h2`
     font-size: 25px;
@@ -74,6 +75,8 @@ export default function Projects() {
     padding: 0px 20px;
     @media (max-width: 641px) {
       object-fit: cover;
+      width: 100%;
+      padding: 0px 0;
     }
   `;
 
@@ -104,75 +107,38 @@ export default function Projects() {
       <HeaderOne fontColor={green}>Projects</HeaderOne>
       {projects &&
         projects.map((details, i) => {
-          if (i % 2 === 1) {
-            return (
-              <ProjectCard>
-                <ProjectDetails>
-                  <ProjectName side={"left"} fontColor={slate}>
-                    {details.name}
-                  </ProjectName>
-                  <TechList side={"left"}>
-                    {details.techs.map((tech) => {
-                      return (
-                        <TechListItem fontColor={grey}>{tech}</TechListItem>
-                      );
-                    })}
-                  </TechList>
-                  <ProjectDis fontColor={grey}>
-                    {details.description}
-                  </ProjectDis>
-                  <Footer side={"left"} fontColor={white}>
-                    {details.gitHub.map((gitHub) => {
-                      return (
-                        <a href={gitHub.link}>
-                          <p>{gitHub.name} - </p>
-                          <Icon name="GitHub" />
-                        </a>
-                      );
-                    })}
-                  </Footer>
-                </ProjectDetails>
-                <Image
-                  src={require(`../../images/projects/${details.image}`)}
-                  alt="myHealthSystem"
-                />
-              </ProjectCard>
-            );
-          } else {
-            return (
-              <ProjectCard>
-                <Image
-                  src={require(`../../images/projects/${details.image}`)}
-                  alt="myHealthSystem"
-                />
-                <ProjectDetails>
-                  <ProjectName side={"right"} fontColor={slate}>
-                    {details.name}
-                  </ProjectName>
-                  <TechList side={"right"}>
-                    {details.techs.map((tech) => {
-                      return (
-                        <TechListItem fontColor={grey}>{tech}</TechListItem>
-                      );
-                    })}
-                  </TechList>
-                  <ProjectDis fontColor={grey}>
-                    {details.description}
-                  </ProjectDis>
-                  <Footer side={"right"} fontColor={white}>
-                    {details.gitHub.map((gitHub) => {
-                      return (
-                        <a href={gitHub.link}>
-                          <p>{gitHub.name} - </p>
-                          <Icon name="GitHub" />
-                        </a>
-                      );
-                    })}
-                  </Footer>
-                </ProjectDetails>
-              </ProjectCard>
-            );
-          }
+          return (
+            <ProjectCard>
+              <ProjectDetails>
+                <ProjectName
+                  side={i % 2 === 1 ? "left" : "right"}
+                  fontColor={slate}
+                >
+                  {details.name}
+                </ProjectName>
+                <TechList side={i % 2 === 1 ? "left" : "right"}>
+                  {details.techs.map((tech) => {
+                    return <TechListItem fontColor={grey}>{tech}</TechListItem>;
+                  })}
+                </TechList>
+                <ProjectDis fontColor={grey}>{details.description}</ProjectDis>
+                <Footer side={i % 2 === 1 ? "left" : "right"} fontColor={white}>
+                  {details.gitHub.map((gitHub) => {
+                    return (
+                      <a href={gitHub.link}>
+                        <p>{gitHub.name} - </p>
+                        <Icon name="GitHub" />
+                      </a>
+                    );
+                  })}
+                </Footer>
+              </ProjectDetails>
+              <Image
+                src={require(`../../images/projects/${details.image}`)}
+                alt="myHealthSystem"
+              />
+            </ProjectCard>
+          );
         })}
     </ProjectsBody>
   );

@@ -14,6 +14,7 @@ export default function Navbar() {
     background-color: ${(props) => props.backgroundColor};
     font-family: var(--font-mono);
     @media (max-width:641px){
+      width: 100vw;
       position: sticky;
       display: flex;
       flex-direction: row;

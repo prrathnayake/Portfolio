@@ -8,27 +8,27 @@ export default function Cover() {
     height: 100%;
     display: flex;
     @media (max-width: 641px) {
-      padding: 0 10px;
+      width: 100vw;
+      display: flex;
+      padding: 0 0px;
       flex-direction: column;
-      align-item: center;
-      justify-content: center;
     }
     div {
       width: 100%;
       img {
         width: 300px;
         @media (max-width: 641px) {
-          width: 300px;
+          padding-left: 60px;
         }
-      }
-      @media (max-width: 641px) {
-        align-item: center;
       }
     }
   `;
   const FlexDIV = styled.div`
     padding-right: 50px;
-
+    @media (max-width: 641px) {
+      padding-left: 10px;
+      width: 100%;
+    }
     }
   `;
   const HeaderOne = styled.h1`
