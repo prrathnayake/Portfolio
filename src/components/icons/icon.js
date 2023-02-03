@@ -4,8 +4,9 @@ import IconGitHub from "./github";
 import IconInstagram from "./instagram";
 import IconLinkedin from "./linkedin";
 import IconExclamation from "./exclamation";
+import IconClose from "./close";
 
-const Icon = ({ name }) => {
+const Icon = ({ name, height }) => {
   switch (name) {
     case "GitHub":
       return <IconGitHub />;
@@ -13,6 +14,8 @@ const Icon = ({ name }) => {
       return <IconInstagram />;
     case "Linkedin":
       return <IconLinkedin />;
+    case "close":
+      return <IconClose height={height}/>;
     default:
       return <IconExclamation />;
   }
