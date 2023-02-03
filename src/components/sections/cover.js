@@ -5,11 +5,31 @@ import { green, white } from "../../utils/colors";
 export default function Cover() {
   const CoverBody = styled.div`
     padding: 100px 200px;
-    height: 360px;
+    height: 100%;
     display: flex;
+    @media (max-width: 641px) {
+      padding: 0 10px;
+      flex-direction: column;
+      align-item: center;
+      justify-content: center;
+    }
+    div {
+      width: 100%;
+      img {
+        width: 300px;
+        @media (max-width: 641px) {
+          width: 300px;
+        }
+      }
+      @media (max-width: 641px) {
+        align-item: center;
+      }
+    }
   `;
   const FlexDIV = styled.div`
     padding-right: 50px;
+
+    }
   `;
   const HeaderOne = styled.h1`
     padding-bottom: 20px;
@@ -31,6 +51,10 @@ export default function Cover() {
     font-size: 16px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
+    @media (max-width: 641px) {
+      width: 100%;
+      padding-bottom: 20px;
+    }
   `;
 
   return (
@@ -40,10 +64,13 @@ export default function Cover() {
         <Name fontColor={white}>Pasan Rathnayake</Name>
         <SubTitle fontColor={white}>Software Engineer</SubTitle>
         <Discription fontColor={white}>
-        Hi, I'm passionate about delivering innovative and high-quality software solutions.
+          Hi, I'm passionate about delivering innovative and high-quality
+          software solutions.
         </Discription>
       </FlexDIV>
-      <img src={require("../../images/me.jpg")} alt="me" />
+      <div>
+        <img src={require("../../images/me.jpg")} alt="me" />
+      </div>
     </CoverBody>
   );
 }

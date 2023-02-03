@@ -44,6 +44,9 @@ export default function Contact() {
     display: flex;
     flex-direction: column;
     width: 600px;
+    @media (max-width: 641px) {
+      width: 300px;
+    }
     label {
       padding-bottom: 10px;
     }

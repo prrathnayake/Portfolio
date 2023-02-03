@@ -21,6 +21,13 @@ export default function About() {
   const AboutBody = styled.div`
     padding: 30px 200px;
     height: 100vh;
+    @media (max-width: 641px) {
+      padding: 0 10px;
+      flex-direction: column;
+      align-item: center;
+      justify-content: center;
+      height: 100%;
+    }
   `;
   const HeaderOne = styled.h1`
     font-size: 60px;
@@ -35,6 +42,10 @@ export default function About() {
     font-family: var(--font-sans);
     font-weight: 600;
     text-align: left;
+    @media (max-width: 641px) {
+      width: 100%;
+      text-align: justify;
+    }
   `;
   const SubTitle = styled.p`
     padding-top: 20px;
@@ -49,6 +60,18 @@ export default function About() {
     width: 600px;
     > * {
       padding-right: 40px;
+      @media (max-width: 641px) {
+        width: 50px;
+        grid-template-columns: auto auto auto auto auto;
+
+          display: flex;
+          flex-wrap: wrap;
+          padding-right: 40px;
+      }
+    }
+    @media (max-width: 641px) {
+      width: 100%;
+      grid-template-columns: auto auto auto auto auto;
     }
   `;
   return (

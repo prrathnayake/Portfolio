@@ -7,6 +7,9 @@ import Icon from "../icons/icon";
 export default function Projects() {
   const ProjectsBody = styled.div`
     padding: 10px 150px;
+    @media (max-width: 641px) {
+      padding: 0 10px;
+    }
   `;
   const HeaderOne = styled.h1`
     font-size: 60px;
@@ -19,6 +22,9 @@ export default function Projects() {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 50px;
+    @media (max-width: 641px) {
+      flex-direction: column;
+    }
   `;
   const ProjectDetails = styled.div``;
   const TechList = styled.div`
@@ -26,6 +32,9 @@ export default function Projects() {
     flex-direction: row;
     padding-top: 5px;
     justify-content: ${(props) => props.side};
+    @media (max-width: 641px) {
+      justify-content: left;
+    }
   `;
   const TechListItem = styled.p`
     font-size: 14px;
@@ -33,12 +42,19 @@ export default function Projects() {
     font-family: var(--font-mono);
     padding-right: 12px;
     padding-left: 12px;
+    @media (max-width: 641px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   `;
   const ProjectName = styled.h2`
     font-size: 25px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
     text-align: ${(props) => props.side};
+    @media (max-width: 641px) {
+      text-align: left;
+    }
   `;
   const ProjectDis = styled.h2`
     font-size: 16px;
@@ -48,11 +64,17 @@ export default function Projects() {
     width: 500px;
     text-align: justify;
     padding-top: 15px;
+    @media (max-width: 641px) {
+      width: 100%;
+    }
   `;
 
   const Image = styled.img`
     height: 300px;
     padding: 0px 20px;
+    @media (max-width: 641px) {
+      object-fit: cover;
+    }
   `;
 
   const Footer = styled.div`
@@ -61,6 +83,9 @@ export default function Projects() {
     display: flex;
     flex-direction: row;
     justify-content: ${(props) => props.side};
+    @media (max-width: 641px) {
+      justify-content: left;
+    }
     a {
       text-decoration: none;
       color: ${(props) => props.fontColor};
