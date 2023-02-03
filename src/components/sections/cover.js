@@ -12,23 +12,19 @@ export default function Cover() {
       display: flex;
       padding: 0 0px;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    div {
-      width: 100%;
-      img {
-        width: 300px;
-        @media (max-width: 641px) {
-          padding-left: 60px;
-        }
+    img {
+      width: 200px;
+      @media (max-width: 641px) {
       }
     }
   `;
   const FlexDIV = styled.div`
     padding-right: 80px;
     @media (max-width: 641px) {
-      padding-left: 10px;
-      width: 100%;
-    }
+      padding-left: 30px;
     }
   `;
   const HeaderOne = styled.h1`
@@ -36,14 +32,23 @@ export default function Cover() {
     font-size: 20px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-mono);
+    @media (max-width: 641px) {
+      padding-bottom: 10px;
+    }
   `;
   const Name = styled.h2`
     font-size: 70px;
     color: ${(props) => props.fontColor};
+    @media (max-width: 641px) {
+      font-size: 50px;
+    }
   `;
   const SubTitle = styled.p`
     font-size: 30px;
     color: ${(props) => props.fontColor};
+    @media (max-width: 641px) {
+      font-size: 20px;
+    }
   `;
   const Discription = styled.p`
     padding-top: 30px;
@@ -68,9 +73,8 @@ export default function Cover() {
           software solutions.
         </Discription>
       </FlexDIV>
-      <div>
-        <img src={require("../../images/me.jpg")} alt="me" />
-      </div>
+
+      <img src={require("../../images/me.jpg")} alt="me" />
     </CoverBody>
   );
 }

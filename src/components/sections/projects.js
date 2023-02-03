@@ -16,6 +16,11 @@ export default function Projects() {
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
     padding-bottom: 30px;
+    @media (max-width: 641px) {
+      padding-top: 20px;
+      font-size: 40px;
+      padding-bottom: 10px;
+    }
   `;
   const ProjectCard = styled.div`
     display: grid;
@@ -39,6 +44,7 @@ export default function Projects() {
     @media (max-width: 641px) {
       display: grid;
       grid-template-columns: auto auto auto auto auto auto;
+      justify-content: left;
     }
   `;
   const TechListItem = styled.p`
@@ -66,7 +72,7 @@ export default function Projects() {
     text-align: justify;
     padding-top: 15px;
     @media (max-width: 641px) {
-      width: 100%;
+      width: 95vw;
     }
   `;
 
@@ -75,7 +81,7 @@ export default function Projects() {
     padding: 0px 20px;
     @media (max-width: 641px) {
       object-fit: cover;
-      width: 100%;
+      width: 95vw;
       padding: 0px 0;
     }
   `;

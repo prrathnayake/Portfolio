@@ -17,6 +17,10 @@ export default function Contact() {
     font-size: 60px;
     color: ${(props) => props.fontColor};
     font-family: 6var (--font-sans);
+    @media (max-width: 641px) {
+      padding-top: 20px;
+      font-size: 40px;
+    }
   `;
   const Form = styled.div`
     margin-left: auto;

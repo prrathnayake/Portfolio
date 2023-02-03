@@ -33,6 +33,10 @@ export default function About() {
     font-size: 60px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
+    @media (max-width: 641px) {
+      padding-top: 20px;
+      font-size: 40px;
+    }
   `;
   const Discription = styled.p`
     padding-top: 30px;
