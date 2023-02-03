@@ -24,7 +24,7 @@ export default function Cover() {
     }
   `;
   const FlexDIV = styled.div`
-    padding-right: 50px;
+    padding-right: 80px;
     @media (max-width: 641px) {
       padding-left: 10px;
       width: 100%;
