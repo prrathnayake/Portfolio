@@ -6,7 +6,7 @@ import Icon from "../icons/icon";
 
 export default function Projects() {
   const ProjectsBody = styled.div`
-    padding: 10px 200px;
+    padding: 10px 150px;
   `;
   const HeaderOne = styled.h1`
     font-size: 60px;
@@ -16,6 +16,8 @@ export default function Projects() {
   `;
   const ProjectCard = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding-bottom: 50px;
   `;
   const ProjectDetails = styled.div``;
@@ -23,13 +25,14 @@ export default function Projects() {
     display: flex;
     flex-direction: row;
     padding-top: 5px;
-    justify-content:  ${(props) => props.side};
+    justify-content: ${(props) => props.side};
   `;
   const TechListItem = styled.p`
     font-size: 14px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-mono);
     padding-right: 12px;
+    padding-left: 12px;
   `;
   const ProjectName = styled.h2`
     font-size: 25px;
@@ -41,7 +44,8 @@ export default function Projects() {
     font-size: 16px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
-    width: 450px;
+    font-weight: 400;
+    width: 500px;
     text-align: justify;
     padding-top: 15px;
   `;
@@ -56,7 +60,7 @@ export default function Projects() {
     padding-top: 10px;
     display: flex;
     flex-direction: row;
-    justify-content:  ${(props) => props.side};
+    justify-content: ${(props) => props.side};
     a {
       text-decoration: none;
       color: ${(props) => props.fontColor};
@@ -79,7 +83,9 @@ export default function Projects() {
             return (
               <ProjectCard>
                 <ProjectDetails>
-                  <ProjectName side={"left"} fontColor={slate}>{details.name}</ProjectName>
+                  <ProjectName side={"left"} fontColor={slate}>
+                    {details.name}
+                  </ProjectName>
                   <TechList side={"left"}>
                     {details.techs.map((tech) => {
                       return (
@@ -115,7 +121,9 @@ export default function Projects() {
                   alt="myHealthSystem"
                 />
                 <ProjectDetails>
-                  <ProjectName side={"right"} fontColor={slate}>{details.name}</ProjectName>
+                  <ProjectName side={"right"} fontColor={slate}>
+                    {details.name}
+                  </ProjectName>
                   <TechList side={"right"}>
                     {details.techs.map((tech) => {
                       return (

@@ -33,7 +33,8 @@ export default function About() {
     font-size: 16px;
     color: ${(props) => props.fontColor};
     font-family: var(--font-sans);
-    text-align: justify;
+    font-weight: 600;
+    text-align: left;
   `;
   const SubTitle = styled.p`
     padding-top: 20px;
