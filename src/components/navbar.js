@@ -9,7 +9,7 @@ export default function Navbar() {
   const StyledNav = styled.nav`
     height: 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background-color: ${(props) => props.backgroundColor};
     font-family: var(--font-mono);
@@ -18,7 +18,14 @@ export default function Navbar() {
       position: sticky;
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: center;
+    }
+    img{
+      height: 50px;
+      padding-left: 20px;
+      @media (max-width:641px){
+        padding: 0;
+      }
     }
     ul {
       padding: 0;
@@ -27,8 +34,7 @@ export default function Navbar() {
       flex-direction: row;
       list-style: none;
       @media (max-width:641px){
-        flex-direction: row;
-        justify-content: flex-start;
+       display: none;
         padding-top: 15px;
       }
       li {
@@ -50,6 +56,7 @@ export default function Navbar() {
 
   return (
     <StyledNav backgroundColor={navy}>
+      <img src={require("../../src/images/logo1.png")} alt="me" />
       <ul>
         {navLinks && // add navbar items
           navLinks.map(({ url, name }, i) => (

@@ -8,6 +8,7 @@ export default function Cover() {
     height: 50vh;
     display: flex;
     @media (max-width: 641px) {
+      height: 100%;
       width: 100vw;
       display: flex;
       padding: 0 0px;
