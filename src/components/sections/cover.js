@@ -61,6 +61,9 @@ export default function Cover() {
       width: 100%;
       padding-bottom: 20px;
     }
+    a{
+      color: #64ffda;
+    }
   `;
 
   return (
@@ -71,7 +74,8 @@ export default function Cover() {
         <SubTitle fontColor={white}>Software Engineer</SubTitle>
         <Discription fontColor={white}>
           Hi, I'm passionate about delivering innovative and high-quality
-          software solutions. Currently I,m working at LSEG Technology's as a Intern.
+          software solutions. Currently I,m working at{" "}
+          <a href="https://www.lseg.com/en">LSEG Technology's</a> as a Intern.
         </Discription>
       </FlexDIV>
 
