@@ -71,7 +71,7 @@ export default function Cover() {
         <SubTitle fontColor={white}>Software Engineer</SubTitle>
         <Discription fontColor={white}>
           Hi, I'm passionate about delivering innovative and high-quality
-          software solutions.
+          software solutions. Currently I,m working at LSEG Technology's as a Intern.
         </Discription>
       </FlexDIV>
 
