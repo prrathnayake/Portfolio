@@ -5,7 +5,7 @@ import { green, white } from "../../utils/colors";
 export default function Cover() {
   const CoverBody = styled.div`
     padding: 100px 200px;
-    height: 100%;
+    height: 50vh;
     display: flex;
     @media (max-width: 641px) {
       width: 100vw;
@@ -16,7 +16,8 @@ export default function Cover() {
       justify-content: center;
     }
     img {
-      width: 200px;
+      width: 300px;
+      height: 400px;
       @media (max-width: 641px) {
       }
     }
