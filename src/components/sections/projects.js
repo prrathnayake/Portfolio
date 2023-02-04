@@ -32,6 +32,10 @@ export default function Projects() {
     }
   `;
   const ProjectDetails = styled.div`
+  @media (min-width: 641px) {
+    order: ${(props) => props.order};
+  }
+  
     @media (max-width: 641px) {
       padding-bottom: 10px;
     }
@@ -77,6 +81,9 @@ export default function Projects() {
   `;
 
   const Image = styled.img`
+  @media (min-width: 641px) {
+    order: ${(props) => props.order};
+  }
     height: 300px;
     padding: 0px 20px;
     @media (max-width: 641px) {
@@ -114,8 +121,8 @@ export default function Projects() {
       {projects &&
         projects.map((details, i) => {
           return (
-            <ProjectCard>
-              <ProjectDetails>
+            <ProjectCard >
+              <ProjectDetails  order={i % 2 === 1 ? "1" : "2"}>
                 <ProjectName
                   side={i % 2 === 1 ? "left" : "right"}
                   fontColor={slate}
@@ -140,6 +147,7 @@ export default function Projects() {
                 </Footer>
               </ProjectDetails>
               <Image
+              order={i % 2 === 1 ? "2" : "1"}
                 src={require(`../../images/projects/${details.image}`)}
                 alt="myHealthSystem"
               />
