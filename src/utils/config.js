@@ -48,7 +48,7 @@ module.exports = {
           link: "https://github.com/prrathnayake/Disease-Prediction-Application.git",
         },
       ],
-      image: "finalProject.png",
+      image: "myHealthSystem.PNG",
       description:
         " My Health System is a comprehensive solution that brings together various components to provide a seamless healthcare experience. The system includes a mobile app, a web app, an API server, and a machine learning component, each available on GitHub. The mobile app and web app offer a user-friendly interface for patients, while the API server manages the communication between the front-end and the database. The machine learning component leverages cutting-edge technology to predict diseases based on data input.",
       techs: [

@@ -6,6 +6,7 @@ import Icon from "../icons/icon";
 
 export default function Contact() {
   const ContactBody = styled.div`
+    width: 1345px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,7 +90,7 @@ export default function Contact() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
-  const [msg, setMsg] = useState('');
+  const [msg, setMsg] = useState("");
 
   const close = (e) => {
     e.preventDefault();
@@ -108,12 +109,12 @@ export default function Contact() {
       )
       .then(
         function (response) {
-          setMsg('Comment Sent, Thank You!!!');
+          setMsg("Comment Sent, Thank You!!!");
           setLoading(false);
           setShowPopUp(true);
         },
         function (error) {
-          setMsg('Something is Wrong, Please Try Again!!!Emai');
+          setMsg("Something is Wrong, Please Try Again!!!Emai");
         }
       );
   };

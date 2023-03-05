@@ -7,6 +7,11 @@ import Icon from "../icons/icon";
 export default function Projects() {
   const ProjectsBody = styled.div`
     padding: 10px 150px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     @media (max-width: 641px) {
       padding: 0 10px;
     }
